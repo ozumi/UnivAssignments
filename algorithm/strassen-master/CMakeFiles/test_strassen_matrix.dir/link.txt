@@ -1,0 +1,1 @@
+/usr/bin/c++   -O2 -fforce-addr -Wall -DNDEBUG  -fPIC CMakeFiles/test_strassen_matrix.dir/src/util/timer.o CMakeFiles/test_strassen_matrix.dir/src/test/test_strassen_matrix.o  -o test_strassen_matrix -rdynamic -lm -lpthread 

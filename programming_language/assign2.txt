@@ -1,0 +1,43 @@
+;1
+(define my-loop(lambda(a b c) 
+     (let floop ((i a) (x b) (y c) (s 0))
+          (if(< i b) 
+             (floop (+ i c) b c (+ s i)) s))))
+
+;2
+(define my-eval(lambda(a)
+                (let test((output 0)(op 0)(s (car a))(y (cdr a)))
+                (case s
+                 ((NULL) display output)
+                 ((+) (test 0 1 (car y) (cdr y)))
+                 ((-) (test 0 2 (car y) (cdr y)))
+                 ((*) (test 0 3 (car y) (cdr y)))
+                 ((/) (test 0 4 (car y) (cdr y)))
+                 (else 
+                  (if (pair? s) (set! s (test 0 0 (car s) (cdr s))) (set! output output)) 
+                  (if(pair? (car y)) (set! y (test 0 0 (car (car y))(cdr (car y)))) (set! y (car y))) 
+                  (case op
+                    ((1) (set! output (+ s y)))
+                    ((2) (set! output (- s y)))
+                    ((3) (set! output (* s y)))
+                    ((4) (set! output (/ s y)))
+                    )
+                  output
+                   )))))
+
+  
+(define (s)
+  (display ">> ")
+  (let ((a (read)))
+    (unless (eof-object? a)
+      (display (my-eval a))
+      (newline)
+      (s))))
+ 
+
+                
+;3
+(define bump-counter(let((c 0)) 
+                        (lambda ()
+                        (set! c (+ c 1)) c)))
+                        

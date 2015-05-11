@@ -1,0 +1,32 @@
+;20121324, ju young oh homework#1
+
+;1. 
+(define what-kind (lambda(a b c) 
+( if(= a 0) 'degenerate ( if(= (* b b) (* 4 a c)) 'one ( if(> (* b b) (* 4 a c)) 'two 'none))))) 
+
+;2.
+(define move (lambda(where curr num) 
+(if(eqv? where 'forward) (if(> (+curr num) 99) 99 (+ curr num))
+			(if(< (- curr num) 0) 0 (- curr num)))))
+
+
+;3.
+(define dollar-store? (lambda(c) 
+(if(eqv? c empty) #t (if(>= (car c) 1) #f (dollar-store?(cdr c))))))
+
+;4. 
+(define prices-below-threshold? (lambda(c t) 
+(if(eqv? c empty) #t (if(<= t (car c)) #f (prices-below-threshold? (cdr c) t)))))
+
+;5. 
+(define reverse-list (lambda(l) 
+(if(null? l) null (append (reverse-list(cdr l)) (list(car l))))))
+
+;6. 
+(define deep-reverse (lambda(l)
+(if(null? l) null (if(pair? (car l)) (append (deep-reverse (cdr l)) (list(deep-reverse(car l))))
+(append (deep-reverse(cdr 1)) (list (car 1)))))))
+
+;7.
+(define is-included? (lambda(a b c)
+(if(eqv? b empty) #f (if(eqv? #t (c a (car b))) #t (is-included? a (cdr b) c)))))

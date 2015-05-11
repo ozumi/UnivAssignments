@@ -1,0 +1,100 @@
+Return-Path: <leekanggeun@naver.com>
+Received: (qmail 12271 invoked by uid 100); 7 May 2014 10:52:11 -0000
+Received: from 10.114.49.83 (HELO cweb16.nm.nhnsystem.com) (10.114.49.83)
+  by cmailsend18.nm.naver.com with SMTP;7 May 2014 10:52:10 -0000
+Date: Wed, 7 May 2014 19:52:10 +0900 (KST)
+From: =?UTF-8?B?7J206rCV6re8?= <leekanggeun@naver.com>
+Reply-To: =?UTF-8?B?7J206rCV6re8?= <leekanggeun@naver.com>
+To: ojmme625@google.com
+Message-ID: <c0d710f711aa8ebbe5c0c41a31fcc8bb@cweb16.nm.nhnsystem.com>
+Subject: =?UTF-8?B?b2ptLnB5?=
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_510503_616048449.1399459930949"
+Importance: normal
+X-Priority: 3 (Normal)
+
+
+------=_Part_510503_616048449.1399459930949
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_510502_1811860187.1399459930949"
+
+
+------=_Part_510502_1811860187.1399459930949
+Content-Type: text/plain;
+	charset=UTF-8
+Content-Transfer-Encoding: base64
+
+IAo=
+------=_Part_510502_1811860187.1399459930949
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBzdHlsZT0iZm9udC1zaXplOjEwcHQ7IGZvbnQtZmFtaWx5Okd1bGltOyI+PHA+Jm5ic3A7
+PC9wPjwvZGl2Pg==
+------=_Part_510502_1811860187.1399459930949--
+
+------=_Part_510503_616048449.1399459930949
+Content-Type: text/x-python-script;
+	name="ojm.py"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename=ojm.py
+
+x = raw_input()
+L = list(range(10))
+rs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+checkx = x.replace(" ", "")
+for a in L:
+        for b in L:
+                for c in L:
+                        for d in L:
+                                for e in L:
+                                        rs[ord(x[0])-65] = e
+                                        rs[ord(x[1])-65] = d
+                                        rs[ord(x[2])-65] = c
+                                        rs[ord(x[4])-65] = b
+                                        rs[ord(x[5])-65] = a
+                                        if e == 0:
+                                                continue
+                                        if b == 0:
+                                                continue
+                                        rs[ord(x[10])-65] =(c*a)%10
+                                        rs[ord(x[9])-65] = (d*a)%10 + int((c*a)/10)
+                                        rs[ord(x[8])-65] = (e*a)%10 + int((d*a)/10)
+                                        rs[ord(x[7])-65] = int((e*a)/10)
+                                        if rs[ord(x[7])-65] == 0:
+                                                continue
+                                        rs[ord(x[15])-65] =(c*b)%10
+                                        rs[ord(x[14])-65] = (d*b)%10 + int((c*b)/10)
+                                        rs[ord(x[13])-65] = (e*b)%10 + int((d*b)/10)
+                                        rs[ord(x[12])-65] = int((e*b)/10)
+                                        rs[ord(x[0])-65] = e
+                                        rs[ord(x[1])-65] = d
+                                        rs[ord(x[2])-65] = c
+                                        rs[ord(x[4])-65] = b
+                                        rs[ord(x[5])-65] = a
+                                        if rs[ord(x[12])-65] == 0:
+                                                continue
+                                        rs[ord(x[20])-65] = (rs[ord(x[9])-65]+rs[ord(x[15])-65])%10
+                                        rs[ord(x[19])-65] = (rs[ord(x[8])-65]+rs[ord(x[14])-65])%10 + int((rs[ord(x[9])-65]+rs[ord(x[15])-65])/10)
+                                        rs[ord(x[18])-65] = (rs[ord(x[7])-65]+rs[ord(x[13])-65])%10 + int((rs[ord(x[8])-65]+rs[ord(x[14])-65])/10)
+                                        rs[ord(x[17])-65] = (rs[ord(x[12])-65]) + int((rs[ord(x[7])-65]+rs[ord(x[13])-65])/10)
+                                        rs[ord(x[0])-65] = e
+                                        rs[ord(x[1])-65] = d
+                                        rs[ord(x[2])-65] = c
+                                        rs[ord(x[4])-65] = b
+                                        rs[ord(x[5])-65] = a
+                                        if rs[ord(x[17])-65] == 0:
+                                                continue
+                                        if len(set(checkx)) != len(set(rs)):
+                                                continue
+                                        else:
+                                                if (100*rs[ord(x[0])-65]+10*rs[ord(x[1])-65]+rs[ord(x[2])-65])*rs[ord(x[5])-65] == rs[ord(x[7])-65]*1000 + rs[ord(x[8])-65]*100 + rs[ord(x[9])-65]*10 + rs[ord(x[10])-65]:
+                                                        if (100*rs[ord(x[0])-65]+10*rs[ord(x[1])-65]+rs[ord(x[2])-65])*rs[ord(x[4])-65] == rs[ord(x[12])-65]*1000 + rs[ord(x[13])-65]*100 + rs[ord(x[14])-65]*10 + rs[ord(x[15])-65]:
+                                                                if (100*rs[ord(x[0])-65]+10*rs[ord(x[1])-65]+rs[ord(x[2])-65])*(10*rs[ord(x[4])-65] + rs[ord(x[5])-65]) ==  10000*rs[ord(x[17])-65] + 1000*rs[ord(x[18])-65] + 100*rs[ord(x[19])-65] + 10*rs[ord(x[20])-65] + rs[ord(x[21])-65]:
+                                                                        if rs[ord(x[5])-65] == a and rs[ord(x[4])-65] == b and rs[ord(x[2])-65] == c and rs[ord(x[1])-65] == d and rs[ord(x[0])-65] == e:
+                                                                                result1 = 100*rs[ord(x[0])-65]+10*rs[ord(x[1])-65]+rs[ord(x[2])-65]
+                                                                                result2 = 10*rs[ord(x[4])-65]+rs[ord(x[5])-65]
+                                                                                print('%d %d' % (result1,result2))
+
+------=_Part_510503_616048449.1399459930949--
